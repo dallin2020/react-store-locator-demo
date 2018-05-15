@@ -6,7 +6,7 @@
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-scripts": "1.1.4",
-    "react-store-locator": "^0.3.1"
+    "react-store-locator": "^0.9.6"
   },
   "scripts": {
     "start": "react-scripts start",

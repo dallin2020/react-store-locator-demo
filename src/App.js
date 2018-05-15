@@ -34,15 +34,15 @@ class App extends Component {
           dealers={dealers}
           mapStyle={mapStyle}
           onChange={this.getDealers}
-          googleApiKey={key}
+          // googleApiKey={key}
           pin={myPin}
-          // googleMapIcon={markerIcon} // uncomment to get the imported image for google map icon
-          customIcon={{
+          searchMarker={{
             color: '#00FF00',
             borderColor: '#fff',
             path:
               'M 0,0 C -2,-20 -10,-22 -10,-30 A 10,10 0 1,1 10,-30 C 10,-22 2,-20 0,0 z M -2,-30 a 2,2 0 1,1 4,0 2,2 0 1,1 -4,0'
           }}
+          centerMarker={{ icon: markerIcon }}
         >
           {(dealer, closeDealer) => {
             return (
@@ -85,6 +85,7 @@ class App extends Component {
         <h2>Dealers In Window</h2>
         {this.state.foundDealers.map(dealer => (
           <div
+            key={dealer.id}
             style={{
               border: '1px solid #444',
               width: '25%',

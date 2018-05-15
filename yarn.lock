@@ -5622,13 +5622,14 @@ react-scripts@1.1.4:
   optionalDependencies:
     fsevents "^1.1.3"
 
-react-store-locator@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/react-store-locator/-/react-store-locator-0.3.1.tgz#62d9aaf85fb92fc463d70b53e0c8b6269cc2c128"
+react-store-locator@^0.9.6:
+  version "0.9.6"
+  resolved "https://registry.yarnpkg.com/react-store-locator/-/react-store-locator-0.9.6.tgz#94dc7b098f513a2e7f7b71ce644e19a6071df0ca"
   dependencies:
     geolib "^2.0.24"
     google-map-react "^0.34.0"
     google-maps-react "^2.0.2"
+    statable "^0.2.3"
 
 react@^16.3.2:
   version "16.3.2"
@@ -6315,6 +6316,10 @@ sshpk@^1.7.0:
     ecc-jsbn "~0.1.1"
     jsbn "~0.1.0"
     tweetnacl "~0.14.0"
+
+statable@^0.2.3:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/statable/-/statable-0.2.4.tgz#b214dccff145bf13c451140be7dd8963e7b2a1c5"
 
 static-extend@^0.1.1:
   version "0.1.2"
