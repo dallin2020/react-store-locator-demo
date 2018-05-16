@@ -3,7 +3,7 @@ import { Map, Info } from 'react-store-locator';
 
 import myPin from './myPin';
 import mapStyle from './mapStyle.json';
-import dealers from './dealers';
+import locations from './locations';
 import './App.css';
 const markerIcon =
   'https://cdn2.iconfinder.com/data/icons/IconsLandVistaMapMarkersIconsDemo/256/MapMarker_PushPin_Right_Chartreuse.png';
@@ -13,14 +13,14 @@ class App extends Component {
     super(props);
 
     this.state = {
-      foundDealers: []
+      foundLocations: []
     };
 
-    this.getDealers = this.getDealers.bind(this);
+    this.getLocations = this.getLocations.bind(this);
   }
 
-  getDealers(dealers) {
-    this.setState({ foundDealers: dealers });
+  getLocations(locations) {
+    this.setState({ foundLocations: locations });
   }
 
   render() {
@@ -31,10 +31,10 @@ class App extends Component {
           <h1 className="App-title">Welcome to React Store Locator</h1>
         </header>
         <Map
-          dealers={dealers}
+          locations={locations}
           mapStyle={mapStyle}
-          onChange={this.getDealers}
-          // googleApiKey={key}
+          onChange={this.getLocations}
+          googleApiKey={key}
           pin={myPin}
           searchMarker={{
             color: '#00FF00',
@@ -44,10 +44,10 @@ class App extends Component {
           }}
           centerMarker={{ icon: markerIcon }}
         >
-          {(dealer, closeDealer) => {
+          {(location, closeLocation) => {
             return (
               <Info
-                show={dealer.show}
+                show={location.show}
                 style={{
                   height: '30px',
                   backgroundColor: '#696969',
@@ -64,7 +64,7 @@ class App extends Component {
                     fontSize: '12px'
                   }}
                 >
-                  {dealer.name}
+                  {location.name}
                   <div
                     style={{
                       position: 'absolute',
@@ -73,7 +73,7 @@ class App extends Component {
                       cursor: 'pointer',
                       fontWeight: 800
                     }}
-                    onClick={() => closeDealer(dealer.id)}
+                    onClick={() => closeLocation(location.id)}
                   >
                     [x]
                   </div>
@@ -82,10 +82,10 @@ class App extends Component {
             );
           }}
         </Map>
-        <h2>Dealers In Window</h2>
-        {this.state.foundDealers.map(dealer => (
+        <h2>Locations In Window</h2>
+        {this.state.foundLocations.map(location => (
           <div
-            key={dealer.id}
+            key={location.id}
             style={{
               border: '1px solid #444',
               width: '25%',
@@ -103,10 +103,10 @@ class App extends Component {
                   margin: '8px'
                 }}
               >
-                {dealer.name}
+                {location.name}
               </h3>
             </div>
-            <div>{dealer.distanceFromCenter} miles</div>
+            <div>{location.distanceFromCenter} miles</div>
           </div>
         ))}
       </div>
