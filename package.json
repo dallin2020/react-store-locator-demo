@@ -1,17 +1,18 @@
 {
-  "name": "test-react-store-locator",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "react-scripts": "1.1.4",
-    "react-store-locator": "^0.10.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+	"name": "test-react-store-locator",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"emotion": "^10.0.7",
+		"react": "^16.3.2",
+		"react-dom": "^16.3.2",
+		"react-scripts": "1.1.4",
+		"react-store-locator": "^0.17.2"
+	},
+	"scripts": {
+		"dev": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test --env=jsdom",
+		"eject": "react-scripts eject"
+	}
 }
